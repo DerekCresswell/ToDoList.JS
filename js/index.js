@@ -12,6 +12,8 @@
 			list.push(newItem.val());
 			newItem.val("");
 			
+			$("ol").append("<li>" + list[list.length - 1] + "</li>");
+			
 		});
 		
 	});
