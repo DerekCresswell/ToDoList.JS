@@ -20,7 +20,7 @@
 			list.push(item);
 			newItem.val("");
 			
-			$("ol").append("<li>" + list[list.length - 1].value + "<div class='deleteBTN'>X</div></li>");
+			$("ol#list").append("<li>" + list[list.length - 1].value + "<div class='deleteBTN'>X</div></li>");
 			//Picture may be prefered instead of X
 			
 		});
@@ -29,10 +29,13 @@
 			
 			let toRem = $(this).closest("li");	
 			
-			compList.push(list.splice(toRem.index(), 1));
+			let temp = list.splice(toRem.index(), 1);
+			compList.push(temp[0]);
 			compList[compList.length - 1].completed = new Date;
 			
 			toRem.remove();
+			
+			$("ol#compList").append("<li id='compItem'>" + compList[compList.length - 1].value + "</li>");
 			
 		});
 		
