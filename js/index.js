@@ -29,8 +29,7 @@
 			
 			let toRem = $(this).closest("li");	
 			
-			let temp = list.splice(toRem.index(), 1);
-			compList.push(temp[0]);
+			compList.push(list.splice(toRem.index(), 1)[0]);
 			compList[compList.length - 1].completed = new Date;
 			
 			toRem.remove();
