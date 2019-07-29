@@ -17,11 +17,20 @@
 	li {
 		
 		background: #cce5ff;
+		padding-top: 5px;
+		padding-bottom: 5px;
 		
 	}
 	
 	li:hover {
 		
 		background-color: white;
+		
+	}
+	
+	.deleteBTN {
+		
+		float: right;
+		padding-right: 5px;
 		
 	}
