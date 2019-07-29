@@ -1,4 +1,6 @@
 
+	let baseDate = new Date;
+
 	$(document).ready(function(){
 		
 		let list = [];
@@ -7,12 +9,18 @@
 			
 			let newItem = $("#inputText");
 			if(newItem.val() == "")
-				return
+				return;
 			
-			list.push(newItem.val());
+			let item = {
+				value: newItem.val(),
+				date: new Date,
+				//
+			}
+			
+			list.push(item);
 			newItem.val("");
 			
-			$("ol").append("<li>" + list[list.length - 1] + "</li>");
+			$("ol").append("<li>" + list[list.length - 1].value + "</li>");
 			
 		});
 		
