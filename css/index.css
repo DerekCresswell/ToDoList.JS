@@ -52,6 +52,12 @@
 		
 	}
 	
+	.compDataItem:hover{
+		
+		background: #ccffda; 
+		
+	}
+	
 	li:hover {
 		
 		background-color: white;
