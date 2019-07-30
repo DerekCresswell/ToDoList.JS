@@ -33,6 +33,25 @@
 		
 	}
 	
+	#compItem:hover {
+		
+		cursor: pointer;
+		
+	}
+	
+	.compData {
+		
+		background: #ccffda; 
+		display: none;
+		
+	}
+	
+	.compDataItem {
+		
+		background: #ccffda; 
+		
+	}
+	
 	li:hover {
 		
 		background-color: white;

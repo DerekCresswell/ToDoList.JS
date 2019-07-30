@@ -36,12 +36,13 @@
 				
 				toRem.remove();
 				let toAdd = $("ol#compList");
-				toAdd.append("<li id='compItem'>" + compList[compList.length - 1].value + "</li>");
+				toAdd.append("<li id='compItem'>" + compList[compList.length - 1].value + "<ol class='compData'><li class='compDataItem'>temp</li></ol></li>");
 				toAdd.hide().fadeIn(500);
 				
 			});
 			
 		});
+		
 		
 		$("#list").on({mouseenter: function(){
 			
@@ -52,5 +53,11 @@
 			$(this).parent().css("text-decoration", "none");
 			
 		}}, ".deleteBTN");
+		
+		$("#compList").on("click", "#compItem", function(){
+			
+			$(this).find("ol").slideToggle();
+			
+		});
 		
 	});
