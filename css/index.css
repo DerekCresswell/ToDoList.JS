@@ -39,5 +39,8 @@
 		float: right;
 		padding-right: 5px;
 		cursor: pointer;
+		color: red;
+		font-weight: bold;
+		font-family: arial
 		
 	}
