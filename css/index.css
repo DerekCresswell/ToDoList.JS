@@ -2,6 +2,7 @@
 	body {
 		
 		text-align: center;
+		font-size: 1.25em;
 		background-color: lightblue;
 		
 	}
@@ -19,6 +20,10 @@
 		background: #cce5ff;
 		padding-top: 5px;
 		padding-bottom: 5px;
+		font-size: 1.15em;
+		width: 75%;
+		display: inline-block;
+		float: none;
 		
 	}
 	

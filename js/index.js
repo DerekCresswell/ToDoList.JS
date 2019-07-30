@@ -32,10 +32,25 @@
 			compList.push(list.splice(toRem.index(), 1)[0]);
 			compList[compList.length - 1].completed = new Date;
 			
-			toRem.remove();
-			
-			$("ol#compList").append("<li id='compItem'>" + compList[compList.length - 1].value + "</li>");
+			toRem.fadeOut(500, function(){
+				
+				toRem.remove();
+				let toAdd = $("ol#compList");
+				toAdd.append("<li id='compItem'>" + compList[compList.length - 1].value + "</li>");
+				toAdd.hide().fadeIn(500);
+				
+			});
 			
 		});
+		
+		$("#list").on({mouseenter: function(){
+			
+			$(this).parent().css("text-decoration", "line-through");
+			
+		}, mouseleave: function(){
+			
+			$(this).parent().css("text-decoration", "none");
+			
+		}}, ".deleteBTN");
 		
 	});
