@@ -1,7 +1,6 @@
 
 	let baseDate = new Date();
 	let list = [];
-	let compList = [];
 	
 	$(document).ready(function(){
 
@@ -14,6 +13,7 @@
 			let item = {
 				value: newItem.val(),
 				date: new Date(),
+				completionDate: null,
 				completed: false
 			}
 			
@@ -32,12 +32,8 @@
 			let toRem = $(this).closest("li");
 			let index = toRem.data('index');
 			
-			//If elm before this is removed "data-index" does not work \/ needs fixing
-			list[index].completed = new Date();
-			compList.push(list[index]);
-
-			let newIndex = compList.length - 1;
-			list.splice(index, 1);
+			list[index].completionDate = new Date();
+			list[index].completed = true;
 			
 			toRem.fadeOut(500, function(){
 				
@@ -45,8 +41,8 @@
 				
 				$("ol#compList").append($("<li>", {
 					id: 'compItem',
-					html: compList[newIndex].value + "<ol class='compData'><li class='compDataItem'>TEMP</li></ol>", //Need data added
-					'data-index': newIndex
+					html: list[index].value + "<ol class='compData'><li class='compDataItem'>TEMP</li></ol>", //Need data added
+					'data-index': index
 				}));
 				
 				$("ol#compList").hide().fadeIn(500);
