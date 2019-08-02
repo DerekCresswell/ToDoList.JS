@@ -21,7 +21,7 @@
 			newItem.val("");
 			
 			$("ol#list").append($("<li>", {
-				html: item.value + " <div class='deleteBTN'>X</div>",
+				html: item.value + " <div class='deleteBTN'>X</div> <div id='slideItem'>Temp Data</div>",
 				'data-index': list.length - 1
 			}));
 			
@@ -41,7 +41,8 @@
 				
 				$("ol#compList").append($("<li>", {
 					id: 'compItem',
-					html: list[index].value + "<ol class='compData'><li class='compDataItem'>TEMP</li></ol>", //Need data added
+					html: list[index].value + 
+					"<div id='slideItem'>Space for data</div>",
 					'data-index': index
 				}));
 				
@@ -61,9 +62,10 @@
 			
 		}}, ".deleteBTN");
 		
-		$("#compList").on("click", "#compItem", function(){
-			
-			$(this).find("ol").slideToggle();
+		$("ol").on("click", function(){
+
+			$(this).find("#slideItem").slideToggle();
+			//Update data for item
 			
 		});
 		
