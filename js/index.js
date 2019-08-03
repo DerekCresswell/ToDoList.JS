@@ -62,7 +62,7 @@
 			
 		}}, ".deleteBTN");
 		
-		$("ol").on("click", function(){
+		$("ol").on("click", "li", function(){
 
 			$(this).find("#slideItem").slideToggle();
 			//Update data for item
