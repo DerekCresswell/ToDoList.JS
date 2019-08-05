@@ -6,7 +6,6 @@
 		background-color: lightblue;
 		
 	}
-
 	
 	ol {
 		
@@ -49,6 +48,51 @@
 		font-weight: bold;
 		font-family: arial;
 		
+	}
+
+	#addItem {
+
+		display: inline-block;
+		line-height: 25px;
+		width: 75px;
+		border: 2px solid #333;
+		letter-spacing: 2px;
+		text-align: center;
+		position: relative;
+		transition: all 0.35s;
+
+	}
+
+	#addItem:after {
+
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		width: 0;
+		height: 100%;
+		background: green;
+		transition: all 0.35s; 
+		
+	}
+
+	#addItem:hover {
+
+		color: #fff;
+
+	}
+
+	#addItem:hover:after {
+
+		width: 100%;
+
+	}
+
+	#addItem span {
+
+		position: relative;
+		z-index: 2;
+
 	}
 
 	#slideItem {
